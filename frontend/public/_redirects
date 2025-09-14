@@ -1,0 +1,15 @@
+# Netlify redirects for React Router SPA
+# This ensures all routes are handled by React Router
+
+# Handle React Router routes
+/*    /index.html   200
+
+# API proxy (if using Netlify Functions - optional)
+/api/*  https://your-backend-url.herokuapp.com/api/:splat  200
+
+# Force HTTPS redirect
+http://manishrajak.netlify.app/*  https://manishrajak.netlify.app/:splat  301!
+
+# Handle legacy routes (if any)
+/portfolio  /  301
+/home       /  301
