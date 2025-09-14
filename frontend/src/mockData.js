@@ -7,7 +7,7 @@ export const profileData = {
   email: "mani.rajak007@gmail.com",
   phone: "+91-9975143179",
   linkedin: "linkedin.com/in/manish-kumar-9841b154",
-  profileImage: "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISEhUSEhIVFRUVFRUVFRUVFRUVFRUVFRUWFhUVFRUYHSggGBolHRUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OFQ8QFS0dFR0tKy0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAQMAwgMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAADAAECBAUGBwj/xAA8EAABAwIEBAMGBAUEAwEAAAABAAIDBBEYEjFBBVFhcSKBkQYTMqGx0SNCUsEHFJLh8CRicuIzgqKjsv/EABUBAQEAAAAAAAAAAAAAAAAAAPB==", // User's actual photo
+  profileImage: "/api/placeholder/400/400", // User's professional photo
   summary: "Lead Analyst with more than 10 years of professional experience in development and implementation of SAP ERP business applications.",
   yearsOfExperience: "10+"
 };
