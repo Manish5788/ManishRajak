@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Manish Kumar Rajak - Professional Portfolio
 
 A modern, responsive portfolio website showcasing my expertise as a SAP ABAP/UI5 Consultant with 10+ years of experience.
@@ -134,3 +135,7 @@ While this is a personal portfolio, suggestions and feedback are welcome! Feel f
 ⭐ **If you like this portfolio, please give it a star on GitHub!** ⭐
 
 Built with ❤️ by Manish Kumar Rajak
+=======
+# ManishRajak
+This is the portfolio website created using AI
+>>>>>>> 7a0d58cb0846c3453ee0d2a66b21212bd0a577a1
