@@ -1,0 +1,21 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://manishrajak.netlify.app/sitemap.xml
+
+# Disallow unnecessary files
+Disallow: /static/js/
+Disallow: /static/css/
+Disallow: /*.json$
+Disallow: /manifest.json
+Disallow: /site.webmanifest
+
+# Allow important resources
+Allow: /static/media/
+Allow: /favicon.ico
+Allow: /apple-touch-icon.png
+Allow: /og-image.jpg
+
+# Crawl delay (optional)
+Crawl-delay: 1
