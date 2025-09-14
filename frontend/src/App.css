@@ -1,34 +1,351 @@
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+/* Pixel Pushers Design System - Portfolio Version */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap');
+
+/* CSS Variables - Pixel Pushers Color System */
+:root {
+  /* Backgrounds - Exact Pixel Pushers Colors */
+  --bg-page: #1a1c1b;                       /* Main black background */
+  --bg-card: #302f2c;                       /* Dark gray card backgrounds */
+  --bg-light: #dfddd6;                      /* Light backgrounds when needed */
+  
+  /* Text - Exact Pixel Pushers Colors */
+  --text-primary: #d9fb06;                  /* Lime green primary text */
+  --text-secondary: #888680;                /* Mid gray supporting text */
+  --text-muted: #302f2c;                    /* Dark gray muted text */
+  --text-inverse: #1a1c1b;                  /* Black text on light backgrounds */
+  --text-white: #ffffff;                    /* Pure white text */
+  
+  /* Borders - Exact Pixel Pushers Colors */
+  --border-light: rgba(63, 72, 22, 0.5);   /* Subtle olive-tinted borders */
+  --border-medium: #3f4816;                 /* Standard olive borders */
+  --border-strong: #888680;                 /* Strong gray borders */
+  
+  /* MAIN BRAND COLORS - Pixel Pushers Brand Colors Only */
+  --brand-primary: #d9fb06;                 /* Primary lime green */
+  --brand-hover: rgba(217, 251, 6, 0.8);   /* Hover state */
+  --brand-active: rgba(217, 251, 6, 0.6);  /* Active/pressed state */
+  
+  /* Supporting Colors - Use sparingly for variety */
+  --secondary-olive: #3f4816;               /* Dark olive green */
+  --secondary-yellow: #f8d47a;              /* Warm yellow accent */
+  --secondary-blue: #0073e6;                /* Blue for links */
+  --neutral-white: white;                   /* Pure white */
+  --neutral-light: #dfddd6;                 /* Light neutral */
+  
+  /* Spacing System - Pixel Pushers Values */
+  --space-xs: 8px;
+  --space-sm: 20px;
+  --space-md: 40px;
+  --space-lg: 96px;
+  --space-xl: 120px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  background-color: var(--bg-page);
+  color: var(--text-white);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.App-link {
-    color: #61dafb;
+/* Typography System - Pixel Pushers Sizing */
+.brand-display { 
+  font-family: 'Inter', Arial, sans-serif; 
+  font-weight: 900; 
+  font-size: clamp(3rem, 5.2571rem + 3.0476vw, 6rem); 
+  line-height: 0.9; 
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+.heading-1 { 
+  font-family: 'Inter', Arial, sans-serif; 
+  font-weight: 900; 
+  font-size: clamp(2.5rem, 4rem + 2vw, 4rem); 
+  line-height: 0.9; 
+  text-transform: uppercase; 
+  color: var(--text-white);
+}
+
+.heading-2 { 
+  font-family: 'Inter', Arial, sans-serif; 
+  font-weight: 700; 
+  font-size: clamp(1.8rem, 2.5rem + 1vw, 2.5rem); 
+  line-height: 1.1; 
+  color: var(--text-white);
+}
+
+.heading-3 { 
+  font-family: 'Inter', Arial, sans-serif; 
+  font-weight: 600; 
+  font-size: 1.5rem; 
+  line-height: 1.2; 
+  color: var(--text-white);
+}
+
+.body-large { 
+  font-family: 'Inter', Arial, sans-serif; 
+  font-weight: 500; 
+  font-size: 1.25rem; 
+  line-height: 1.5; 
+  color: var(--text-white); 
+}
+
+.body-medium { 
+  font-family: 'Inter', Arial, sans-serif; 
+  font-weight: 400; 
+  font-size: 1rem; 
+  line-height: 1.6; 
+  color: var(--text-secondary); 
+}
+
+.body-small { 
+  font-family: 'Inter', Arial, sans-serif; 
+  font-weight: 400; 
+  font-size: 0.875rem; 
+  line-height: 1.5; 
+  color: var(--text-secondary); 
+}
+
+.caption { 
+  font-family: 'Inter', Arial, sans-serif; 
+  font-weight: 500; 
+  font-size: 0.75rem; 
+  line-height: 1.4; 
+  color: var(--text-secondary); 
+  text-transform: uppercase; 
+  letter-spacing: 0.1em; 
+}
+
+/* Component Styles - Pixel Pushers CTA Style */
+.btn-primary {
+  background: var(--brand-primary);
+  color: var(--text-inverse);
+  border: none;
+  border-radius: 10rem;
+  padding: 1em 1.5em;
+  font-family: 'Inter', Arial, sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-height: 48px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.1em;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+}
+
+.btn-primary:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+}
+
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--brand-primary);
+  border: 1px solid var(--brand-primary);
+  border-radius: 10rem;
+  padding: 1em 1.5em;
+  font-family: 'Inter', Arial, sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-height: 48px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.1em;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+}
+
+.btn-secondary:hover {
+  background: var(--brand-primary);
+  color: var(--text-inverse);
+  transform: scale(1.02);
+}
+
+.btn-secondary:active {
+  transform: scale(0.98);
+}
+
+/* Layout System */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+.section-padding {
+  padding: var(--space-xl) 0;
+}
+
+/* Grid System */
+.grid {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.grid-2 {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.grid-3 {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* Card Styles */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-medium);
+  border-radius: 8px;
+  padding: var(--space-md);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  background: rgba(48, 47, 44, 0.8);
+  transform: translateY(-2px);
+}
+
+/* Skill Tags */
+.skill-tag {
+  background: var(--bg-card);
+  color: var(--text-white);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: 1px solid var(--border-medium);
+  transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+  border-color: var(--brand-primary);
+  color: var(--brand-primary);
+}
+
+/* Navigation */
+.nav-link {
+  color: var(--text-white);
+  text-decoration: none;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 1em 1.5em;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: var(--brand-primary);
+}
+
+.nav-link.active {
+  color: var(--brand-primary);
+}
+
+/* Hero Section */
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: var(--space-xl) 0;
+  background: var(--bg-page);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 var(--space-sm);
+  }
+  
+  .section-padding {
+    padding: var(--space-lg) 0;
+  }
+  
+  .grid-2,
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+  
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    min-height: 52px;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-page);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--brand-primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--brand-hover);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Focus styles for accessibility */
+button:focus,
+a:focus {
+  outline: 2px solid var(--brand-primary);
+  outline-offset: 2px;
+}
+
+/* Selection color */
+::selection {
+  background: var(--brand-primary);
+  color: var(--text-inverse);
 }
