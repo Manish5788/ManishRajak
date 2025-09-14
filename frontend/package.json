@@ -57,7 +57,10 @@
   "scripts": {
     "start": "craco start",
     "build": "craco build",
-    "test": "craco test"
+    "test": "craco test",
+    "build:netlify": "yarn install && yarn build",
+    "analyze": "yarn build && npx source-map-explorer 'build/static/js/*.js'",
+    "deploy:netlify": "../deploy-netlify.sh"
   },
   "browserslist": {
     "production": [
