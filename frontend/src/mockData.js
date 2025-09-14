@@ -7,7 +7,7 @@ export const profileData = {
   email: "mani.rajak007@gmail.com",
   phone: "+91-9975143179",
   linkedin: "linkedin.com/in/manish-kumar-9841b154",
-  profileImage: "/api/placeholder/400/400", // User's professional photo
+  profileImage: "https://i.pravatar.cc/400?img=33", // Professional photo placeholder
   summary: "Lead Analyst with more than 10 years of professional experience in development and implementation of SAP ERP business applications.",
   yearsOfExperience: "10+"
 };
