@@ -2,7 +2,7 @@
 
 [build]
   # Directory to change to before starting a build
-  base = "frontend/frontend"   # run install & build here
+  base = "frontend/"   # run install & build here
   command = "yarn build"
   publish = "build"
   
