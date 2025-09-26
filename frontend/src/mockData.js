@@ -10,7 +10,7 @@ export const profileData = {
 <<<<<<< HEAD
   profileImage: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face", // Professional business photo - replace with your actual photo URL
 =======
-  profileImage: "/frontend/public/manish-profile.jpg", // Your professional business photo
+  profileImage: "/manish-profile.jpg", // Your professional business photo
 >>>>>>> ce0ce41fb8e75db34de256ed5223f3f30fab6462
   summary: "Lead Analyst with more than 10 years of professional experience in development and implementation of SAP ERP business applications.",
   yearsOfExperience: "10+"
